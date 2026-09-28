@@ -1,9 +1,0 @@
-package com.example.Veterinaria02092026.Repository;
-
-import com.example.Veterinaria02092026.Entity.HistoriaClinica;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface HistoriaClinicaRepository extends JpaRepository<HistoriaClinica, Long> {
-}
