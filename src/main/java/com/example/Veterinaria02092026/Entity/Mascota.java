@@ -1,9 +1,12 @@
 package com.example.Veterinaria02092026.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Min;
 import lombok.Data;
+import tools.jackson.databind.annotation.JsonAppend;
+
 import java.util.List;
 
 @Entity
@@ -34,6 +37,7 @@ public class Mascota {
     private Propietario propietario;
 
     @OneToOne(mappedBy = "mascota")
+    @JsonIgnore
     private HistoriaClinica historiaClinica;
 
     @ManyToMany

@@ -1,5 +1,6 @@
 package com.example.Veterinaria02092026.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
@@ -25,5 +26,6 @@ public class Propietario {
     private String telefono;
 
     @OneToMany(mappedBy = "propietario")
+    @JsonIgnore
     private List<Mascota> mascotas;
 }
